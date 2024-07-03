@@ -1,4 +1,5 @@
 import pytest
+from faker import Faker
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -20,4 +21,8 @@ def login(driver):
     driver.find_element(*Locators.LOGIN_EMAIL).send_keys(Constants.EMAIL)
     driver.find_element(*Locators.LOGIN_PASSWORD).send_keys(Constants.PASSWORD)
     driver.find_element(*Locators.LOGIN_BUTTON).click()
-    return driver
+
+
+@pytest.fixture(scope='module')
+def faker():
+    return Faker()

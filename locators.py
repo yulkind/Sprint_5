@@ -7,7 +7,8 @@ class Locators:
     REG_NAME = (By.XPATH, '//label[contains(text(),"Имя")]/following-sibling::input[@name="name"]')
     REG_EMAIL = (By.XPATH, '//label[contains(text(),"Email")]/following-sibling::input[@name="name"]')
     REG_PASSWORD = (By.XPATH, '//input[@type="password"]')
-    REG_BUTTON = (By.CLASS_NAME, '//button[text() = "Зарегистрироваться"]')
+    REG_BUTTON = (By.XPATH, '//button[text() = "Зарегистрироваться"]')
+    INCORRECT_PASSWORD_MESSAGE = (By.XPATH, '//p[contains(text(),"Некорректный пароль")]')
 
     # Аутентификация
     LOGIN_TO_ACCOUNT_BUTTON = (By.XPATH, '//button[text()="Войти в аккаунт"]')
@@ -23,7 +24,7 @@ class Locators:
     SAUCES_BUTTON = (By.XPATH, '//span[contains(text(),"Соусы")]')
     FILLINGS_BUTTON = (By.XPATH, '//span[contains(text(),"Начинки")]')
     CONSTRUCTOR_BUTTON = (By.XPATH, '//p[contains(text(),"Конструктор")]')
-    LOGO_BUTTON = (By.XPATH, '//div[@class="AppHeader_header__logo__2D0X2"]')
+    LOGO_BUTTON = (By.XPATH, '//nav/div/a[@href="/"]')
 
     # Личный кабинет
     PROFILE_BUTTON = (By.XPATH, '//p[(text()="Личный Кабинет")]')
